@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>788169609434-6n5lvqegp6c94vbtgfd9m39gn22ggu97.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.788169609434-6n5lvqegp6c94vbtgfd9m39gn22ggu97</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>788169609434-fjhp5g3rb9v914b24dnn0up4rba1j7u8.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA56PBmf7YV8wjbsyjq574kDms7RcGH4yM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>788169609434</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.userAuthentication</string>
+	<key>PROJECT_ID</key>
+	<string>notesapp-eddf3</string>
+	<key>STORAGE_BUCKET</key>
+	<string>notesapp-eddf3.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:788169609434:ios:1fec96bf359532b81a95e3</string>
+	<key>DATABASE_URL</key>
+	<string>https://notesapp-eddf3-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>

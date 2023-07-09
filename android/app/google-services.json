@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "788169609434",
+    "firebase_url": "https://notesapp-eddf3-default-rtdb.firebaseio.com",
+    "project_id": "notesapp-eddf3",
+    "storage_bucket": "notesapp-eddf3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:788169609434:android:023eaa79c7d580541a95e3",
+        "android_client_info": {
+          "package_name": "com.example.user_authentication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "788169609434-joncqh5ksbnh8nt6bkv7an3h2qrg5obs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.user_authentication",
+            "certificate_hash": "8f3b1f9e5313afcd84f6af6263b2f8d6e6758bdc"
+          }
+        },
+        {
+          "client_id": "788169609434-ad4d6i2ptc66709a4rrg7kelgfnkfmel.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOY3hZi4ju5svm51miKX7R-dSzIQ1BdUo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "788169609434-ad4d6i2ptc66709a4rrg7kelgfnkfmel.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "788169609434-6n5lvqegp6c94vbtgfd9m39gn22ggu97.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.userAuthentication"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
