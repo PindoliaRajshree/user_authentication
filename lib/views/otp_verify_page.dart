@@ -167,10 +167,10 @@ class _OTP_Verify_PageState extends State<OTP_Verify_Page> {
                         ),
                         InkWell(
                           onTap: () {
-                            resendOTP();
+                            UserResendToken();
                           },
                           child: Text(
-                            'Request Again'.tr,
+                            ' Request Again'.tr,
                             style: TextStyle(
                               color: ColorCode.black_main,
                               fontFamily: 'Roboto',
@@ -190,7 +190,7 @@ class _OTP_Verify_PageState extends State<OTP_Verify_Page> {
                     right: 16,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: ColorCode.dark_navy_blue,
+                        backgroundColor: ColorCode.dark_navy_blue,
                       ),
                       onPressed: () {
                         print('OTP: $otpCode');
@@ -246,36 +246,18 @@ class _OTP_Verify_PageState extends State<OTP_Verify_Page> {
     }
   }
 
-  Future resendOTP() async {
-    FirebaseAuth auth = FirebaseAuth.instance;
-
-    auth.verifyPhoneNumber(
-      phoneNumber: '+91${widget.mobile}',
-      verificationCompleted: (AuthCredential authCredential) async {
-        await auth
-            .signInWithCredential(authCredential)
-            .catchError((e) => {print(e.toString())});
-        Navigator.of(context)
-            .push(MaterialPageRoute(builder: (context) => HomePage()));
-      },
-      verificationFailed: (FirebaseAuthException authException) {
-        print(authException.message);
-      },
-      codeSent: (String verificationId, int? forceResendingToken) async {
-        PhoneAuthCredential authCredential = PhoneAuthProvider.credential(
-            verificationId: verificationId, smsCode: otpCode!);
-
-        await auth.signInWithCredential(authCredential).catchError((e) {
-          showSnackBar(context, 'Invalid OTP'.tr);
-          print(e.toString());
-        });
-
-        Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => Profile_Page()),
-        );
-      },
-      codeAutoRetrievalTimeout: (String codeAutoRetrievalTimeout) {},
-      timeout: Duration(seconds: 60),
-    );
+  Future UserResendToken() async {
+    try {
+      PhoneAuthCredential authCredential = PhoneAuthProvider.credential(
+          verificationId: await CommonUtils.firebaseResendToken(
+              phone: widget.mobile!, context: context),
+          smsCode: otpCode);
+      await auth.signInWithCredential(authCredential);
+      Navigator.of(context)
+          .pushReplacement(MaterialPageRoute(builder: (context) => HomePage()));
+    } catch (e) {
+      showSnackBar(context, 'Wrong OTP');
+      print('Wrong OTP: $e');
+    }
   }
 }
